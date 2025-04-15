@@ -15,6 +15,7 @@
 - `query keys` 쿼리키 배열 순서는 중요하지만 객체 내부 요소는 해시를 사용하기 때문에 순서는 중요하지 않다.
 - `query functions` 쿼리 함수에 `QueryFunctionContext`가 자동으로 같이 전달된다.
 - `query options` 동일한 쿼리 요청을 여러 군데에서 사용되는 경우(ex. `useQuery`, `useSuspenseQuery`, `useQueries` 등) 쿼리 옵션을 사용하면 일관적으로 관리할 수 있다.
+- `parallel queries` 기본적으로 `useQuery`의 요청이 병렬로 수행된다는 것을 알게됨. 그리고 `useQueries`가 동적 쿼리를 요청하는 훅이구나 라는걸 알게됨(그동안은 useQuery와 차이점이 뭐지 했었음)
 
 <br/>
 
