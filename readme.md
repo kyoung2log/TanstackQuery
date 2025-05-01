@@ -6,6 +6,11 @@
 
 ### 👀 공식문서 읽으면서 알게된 점
 
+**`전체적으로 배운 것`**
+
+- 영어 문서를 읽는 방법... 아직 완전하진 않지만 계속 도전해야겠다.
+- 공식문서가 진~짜 친절하다는 것..
+
 **`GUIDES & CONCEPTS`**
 
 - `important defaults` 캐싱이 된다 정도만 알았지, 어느 경우에 오래된 상태로 취급하는지와 `inactive` 상태로 전환 뒤 5분 뒤 가비지 컬렉터의 대상(캐시에서 삭제)이 된다.
@@ -16,10 +21,13 @@
 - `query functions` 쿼리 함수에 `QueryFunctionContext`가 자동으로 같이 전달된다.
 - `query options` 동일한 쿼리 요청을 여러 군데에서 사용되는 경우(ex. `useQuery`, `useSuspenseQuery`, `useQueries` 등) 쿼리 옵션을 사용하면 일관적으로 관리할 수 있다.
 - `parallel queries` 기본적으로 `useQuery`의 요청이 병렬로 수행된다는 것을 알게됨. 그리고 `useQueries`가 동적 쿼리를 요청하는 훅이구나 라는걸 알게됨(그동안은 useQuery와 차이점이 뭐지 했었음)
+- `background fetching indicators` `useIsFetching`라는 훅을 통해 데이터를 fetching 받는중인지 아닌지에 대해 알 수 있다는 것.. 얘를 사용하면 깃허브 프로그레스바를 구현하기 용이할 것 같다. 직접 사용해봐야 알겠지만..!
+- `disabling/pausing queries` isLoading === isPending && isFetching 라는 것
+- `disabling/pausing queries` skipToken을 사용해서 요청하면 enable을 사용했을 경우보다 명확한 타입 지정이 가능하다는 것을 알게되었고, 이 경우는 refetch에서 동작하지 않으므로, 조건이 만족되지 않으면 아예 쿼리를 "존재하지 않는 것처럼" 다루고 싶을 때 사용하면 좋다는 것을 알게됨
 
 <br/>
 
 ### 🙇‍♀️ REF
 
 - [Tanstack Query 공식문서](https://tanstack.com/query/latest)
-- [탄스택 쿼리 공식문서 톺아보기 스터디 노션](https://fedeepdive.notion.site/?v=1ce2522077a080279f6f000c4afae6c6&pvs=74)
+- [탄스택 쿼리 공식문서 톺아보기 스터디 노션](https://tanstackquery.notion.site/?v=1ce2522077a080279f6f000c4afae6c6&pvs=74)
