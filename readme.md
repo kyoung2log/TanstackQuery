@@ -25,6 +25,8 @@
 - `background fetching indicators` `useIsFetching`라는 훅을 통해 데이터를 fetching 받는중인지 아닌지에 대해 알 수 있다는 것.. 얘를 사용하면 깃허브 프로그레스바를 구현하기 용이할 것 같다. 직접 사용해봐야 알겠지만..!
 - `disabling/pausing queries` isLoading === isPending && isFetching 라는 것
 - `disabling/pausing queries` skipToken을 사용해서 요청하면 enable을 사용했을 경우보다 명확한 타입 지정이 가능하다는 것을 알게되었고, 이 경우는 refetch에서 동작하지 않으므로, 조건이 만족되지 않으면 아예 쿼리를 "존재하지 않는 것처럼" 다루고 싶을 때 사용하면 좋다는 것을 알게됨
+- `invalidations from mutations` 뮤테이션의 올바른 사용방법을 알게되었다...! 그간 필요할때마다 검색해서 코드 긁어왔는데... 흑..
+- `updates from mutation responses` 뮤테이션 실행 후 쿼리무효화 + 네트워크 요청 없이 뮤테이션 응답 객체로 네트워크 부하를 줄이는 방법을 알게되었다. 하지만 상황에 따라 invalidateQueries와 setQueryData의 사용을 명확히 구분하는 것이 중요할 듯 하다.
 
 <br/>
 
