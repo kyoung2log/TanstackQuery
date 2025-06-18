@@ -27,6 +27,10 @@
 - `disabling/pausing queries` skipToken을 사용해서 요청하면 enable을 사용했을 경우보다 명확한 타입 지정이 가능하다는 것을 알게되었고, 이 경우는 refetch에서 동작하지 않으므로, 조건이 만족되지 않으면 아예 쿼리를 "존재하지 않는 것처럼" 다루고 싶을 때 사용하면 좋다는 것을 알게됨
 - `invalidations from mutations` 뮤테이션의 올바른 사용방법을 알게되었다...! 그간 필요할때마다 검색해서 코드 긁어왔는데... 흑..
 - `updates from mutation responses` 뮤테이션 실행 후 쿼리무효화 + 네트워크 요청 없이 뮤테이션 응답 객체로 네트워크 부하를 줄이는 방법을 알게되었다. 하지만 상황에 따라 invalidateQueries와 setQueryData의 사용을 명확히 구분하는 것이 중요할 듯 하다.
+- `Optimistic Updates` : 낙관적 업데이트를 수행하는 두가지 방식과 각각 어디에 써야 좋은지에 대해 알게되었다.
+- `Performance & Request Waterfalls` : 대망의 성능최적화.. 일반적으로 발생하는 4가지 형태(일반, 병렬, 중첩, 코드분할)의 요청 워터풀을 처리하는 방법을 알게되었다. 되게 중요한 파트라 반복해서 곱씹으면 좋을 듯 하다.
+- `Prefetching & Router Integration` : 성능 최적화를 위한 Prefetching 기법과 prefetch된 데이터가 어떤 방식으로 캐시에 채워지는지와, 이 과정에서의 렌더링 성능 이슈에 대해 알 수 있었다.
+- `Server Rendering & Hydration` : 공부하다가 기절한 파트. SSR과 CSR의 쿼리 클라이언트가 따로있고, 여기서 prefetch를 수행했을 때 쿼리데이터를 동기화하고, 렌더링을 성능 이슈를 줄이는 방법을 알 수 있었다.
 
 <br/>
 
